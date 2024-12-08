@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 3rem;
+    text-align:center;
+}
+body{
+    min-height: 100vh;  
+    color: #0e0c0c;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right bottom, #7db497, #4db1ac, #0cabc7, #2f9fdc, #778cdd, #8982d6, #9a77cd, #a96cc0, #956fc5, #7f72c8, #6674c9, #4876c8);
+}
+.add-button{
+    margin-left: 0.8rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+.input-box{
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+
+}
+h1,
+form,
+.todo-list-container,
+.todo-container{
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 18vh;
+
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width:500px; /* Limit the width of the list */
+    width: 100%;      /* Ensure it is responsive */
+}
+input{
+    border: none;
+    outline:none;
+    font-size: 1.5rem;
+    
+}
+button{
+    border: none;
+    outline:none;
+    font-size: 1.5rem;
+    
+}
+.input-box,
+.add-button{
+    padding: 0.5rem;
+}
+.todo-container{
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0.5rem auto;
+    
+    min-height: fit-content;
+    margin-left: 5rem ;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+   
+}
+
+.todo-item{
+    font-size: 30px;
+    background-color:white;
+    margin: 0rem 0rem;
+    padding-right: 1rem;
+    padding-left: 2rem;
+    border-radius: 12px;
+    min-height: fit-content;
+    text-align: center;
+    min-width: 15rem;
+    box-shadow: 0 4px 8px rgba(6, 6, 6, 0.2);
+    margin-left: 0.5rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    display: inline-block;
+    overflow-x: auto; /* Add horizontal scrolling for overflow */
+    
+    
+}
+.fa-trash ,
+.fa-check {
+    pointer-events: none ;
+    
+
+}
+
+.completed{
+   
+    opacity: 0.5;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 0.2rem;
+    .todo-item{
+        background-image: url(tick.png);
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-color:white;
+        
+    }
+    .delete-btn{
+        background-color: rgba(72, 11, 11, 0.581);
+        box-shadow: none;
+        color: #b1a7a7;
+        margin-right:2remrem;
+        width: 2.7rem;
+        height: 2.5rem;
+        
+    }
+    
+}
+    .delete-btn{
+    width: 3rem;
+    margin: 5px;
+    cursor:pointer;
+    padding: 0.5rem;
+    color: #a42817;
+    border-radius: 13px;
+    background-color: #b7b4c26e;
+    box-shadow:#75111100;
+    }
+    .complete-btn{
+    width: 3rem;
+    cursor:pointer;
+    padding: 0.5rem;
+    border-radius: 13px;
+    background-color:#b7b4c26e;
+    color: #09791c;
+    }
+
+/* Media Query for Small Devices (Phones, < 576px) */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .todo-container {
+        flex-direction: row;
+        margin-left: 1rem;
+        padding: 0.5rem;
+        width: 90%;
+    }
+
+    .todo-item {
+        font-size: 20px;
+        min-width: 12rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .add-button,
+    .input-box {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+
+    .delete-btn,
+    .complete-btn {
+        width: 2.9rem;
+        padding: 0.3rem;
+    }
+}
+
+/* Media Query for Medium Devices (Tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .todo-container {
+        margin-left: 3rem;
+        padding: 0.7rem;
+    }
+
+    .todo-item {
+        font-size: 25px;
+        min-width: 14rem;
+    }
+
+    .add-button,
+    .input-box {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .delete-btn,
+    .complete-btn {
+        width: 2.7rem;
+        padding: 0.4rem;
+    }
+}
